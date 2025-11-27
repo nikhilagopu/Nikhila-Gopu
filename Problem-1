@@ -3,7 +3,7 @@ import java.util.*;
 class Calculator{
 
     public double calculate(double a, double b, String operation) {
-        switch (operation) {
+        switch (operation){
             case "+":
                 return a + b;
 
