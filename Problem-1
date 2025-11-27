@@ -1,0 +1,47 @@
+import java.util.*;
+
+class Calculator {
+
+    public double calculate(double a, double b, String operation) {
+        switch (operation) {
+            case "+":
+                return a + b;
+
+            case "-":
+                return a - b;
+
+            case "*":
+                return a * b;
+
+            case "/":
+                if (b == 0) {
+                    throw new ArithmeticException("b cannot be 0 to perform division operation");
+                }
+                return a / b;
+
+            default:
+                System.out.println("Invalid Operator");
+        }
+    }
+}
+
+public class Problem1 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value of a: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter value of b: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter type of operation (+, -, *, /): ");
+        String op = sc.next();
+
+        Calculator c = new Calculator();
+        double result = c.calculate(a, b, op);
+
+        System.out.println("Result: " + result);
+    }
+}
