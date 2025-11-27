@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Calculator {
+class Calculator{
 
     public double calculate(double a, double b, String operation) {
         switch (operation) {
